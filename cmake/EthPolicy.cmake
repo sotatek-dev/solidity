@@ -20,4 +20,9 @@ macro (eth_policy)
 		# Allow selecting MSVC runtime library using CMAKE_MSVC_RUNTIME_LIBRARY.
 		cmake_policy(SET CMP0091 NEW)
 	endif()
+
+	# Avoid warnings in CMake 3.24.0:
+	if (CMAKE_VERSION VERSION_GREATER "3.24.0")
+		cmake_policy(SET CMP0135 NEW)
+	endif()
 endmacro()

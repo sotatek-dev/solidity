@@ -21,7 +21,7 @@ macro (eth_policy)
 		cmake_policy(SET CMP0091 NEW)
 	endif()
 
-	# Avoid warnings in CMake 3.24.0:
+	# Avoid warning about DOWNLOAD_EXTRACT_TIMESTAMP in CMake 3.24:
 	if (CMAKE_VERSION VERSION_GREATER "3.24.0")
 		cmake_policy(SET CMP0135 NEW)
 	endif()
